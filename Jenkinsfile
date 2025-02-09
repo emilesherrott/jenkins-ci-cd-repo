@@ -6,12 +6,10 @@ pipeline {
         PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
     }
     stages {
-        # UPDATED CONFIG
         stage('Checkout') {
             steps {
                 sh 'mvn --version'
                 sh 'docker --version'
-                # UPDATED CONFIG
                 echo 'Checkout'
                 echo "Path: $PATH"
                 echo "Build Number: $env.BUILD_NUMBER"
