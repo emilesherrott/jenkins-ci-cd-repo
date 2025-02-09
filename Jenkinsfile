@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage("Build") {
+        stage('Build') {
             steps {
                 echo 'Build'
             }
@@ -13,8 +13,14 @@ pipeline {
         }
         stage('Integration Test') {
             steps {
-                echo 'Integration Tes'
+                echo 'Integration Test'
             }
+        }
+    # NEW CONFIG
+    } 
+    post {
+        always {
+            echo 'I always run'
         }
     }
 }
