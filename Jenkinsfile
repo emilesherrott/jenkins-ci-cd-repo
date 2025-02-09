@@ -16,7 +16,6 @@ pipeline {
                 echo 'Integration Test'
             }
         }
-    # NEW CONFIG
     } 
     post {
         always {
